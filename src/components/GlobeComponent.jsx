@@ -33,7 +33,7 @@ export default function GlobeComponent() {
 
   // Fetch GeoJSON and generate network arcs
   useEffect(() => {
-    fetch("./data/ne_110m_land.geojson")
+    fetch(`${import.meta.env.BASE_URL}data/ne_110m_land.geojson`)
       .then((res) => {
         if (!res.ok) throw new Error("Failed to load geojson");
         return res.json();
