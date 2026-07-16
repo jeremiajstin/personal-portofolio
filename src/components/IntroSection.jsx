@@ -89,7 +89,7 @@ export default function IntroSection() {
                 </svg>
               </a>
               <a 
-                href="https://linkedin.com" 
+                href="https://www.linkedin.com/in/justin-jeremia-65882428b/" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="w-12 h-12 rounded-lg glass-panel flex items-center justify-center text-gray-400 hover:text-white hover:border-white/40 transition-all duration-300 group"
@@ -113,7 +113,7 @@ export default function IntroSection() {
                 </svg>
               </a>
               <a 
-                href="https://medium.com" 
+                href="https://medium.com/@jeremiajstin" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="w-12 h-12 rounded-lg glass-panel flex items-center justify-center text-gray-400 hover:text-white hover:border-white/40 transition-all duration-300 group"

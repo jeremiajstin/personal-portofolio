@@ -185,7 +185,7 @@ function App() {
               GITHUB
             </a>
             <a 
-              href="https://linkedin.com" 
+              href="https://www.linkedin.com/in/justin-jeremia-65882428b/" 
               target="_blank" 
               rel="noopener noreferrer" 
               className="hover:text-white hover:underline underline-offset-4 transition-colors duration-300"
@@ -201,7 +201,7 @@ function App() {
               INSTAGRAM
             </a>
             <a 
-              href="https://medium.com" 
+              href="https://medium.com/@jeremiajstin" 
               target="_blank" 
               rel="noopener noreferrer" 
               className="hover:text-white hover:underline underline-offset-4 transition-colors duration-300"
