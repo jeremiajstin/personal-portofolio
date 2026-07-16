@@ -1,0 +1,164 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    background-color: #000000;
+    color: #ffffff;
+  }
+  
+  body {
+    background-color: #000000;
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+  }
+}
+
+/* Lenis Scroll Smooth Helpers */
+html.lenis, html.lenis body {
+  height: auto;
+}
+
+.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis-scrolling iframe {
+  pointer-events: none;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #000000;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 4px;
+  border: 2px solid #000000;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #FFFFFF;
+}
+
+/* Glassmorphism Panel styles */
+.glass-panel {
+  background: rgba(12, 12, 12, 0.6);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.glass-panel:hover {
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  box-shadow: 0 0 30px rgba(255, 255, 255, 0.08), inset 0 0 12px rgba(255, 255, 255, 0.02);
+  transform: translateY(-2px);
+}
+
+/* Premium White/Grey Neon glows */
+.neon-glow-text {
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.4), 
+               0 0 20px rgba(255, 255, 255, 0.15);
+}
+
+.neon-glow-text-intense {
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.6), 
+               0 0 25px rgba(255, 255, 255, 0.3),
+               0 0 50px rgba(255, 255, 255, 0.1);
+}
+
+/* Image Glowing Frame */
+.glow-frame {
+  position: relative;
+  border-radius: 1rem;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 0 0 rgba(255, 255, 255, 0);
+  transition: all 0.5s ease;
+}
+
+.glow-frame::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 1rem;
+  border: 1px solid transparent;
+  background: linear-gradient(135deg, #FFFFFF, transparent, #555555) border-box;
+  -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: destination-out;
+  mask-composite: exclude;
+  pointer-events: none;
+  opacity: 0.2;
+  transition: opacity 0.5s ease;
+}
+
+.glow-frame:hover {
+  border-color: rgba(255, 255, 255, 0.5);
+  box-shadow: 0 0 30px rgba(255, 255, 255, 0.15);
+}
+
+.glow-frame:hover::before {
+  opacity: 0.7;
+}
+
+/* Animated Pulse Glow for networks */
+@keyframes pulseGlow {
+  0%, 100% {
+    opacity: 0.3;
+    transform: scale(0.97) translate(0px, 0px);
+  }
+  50% {
+    opacity: 0.6;
+    transform: scale(1.03) translate(5px, 5px);
+  }
+}
+
+.ambient-glow {
+  animation: pulseGlow 10s infinite ease-in-out;
+}
+
+/* Custom styles for tech badges */
+.tech-badge {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.tech-badge:hover {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(255, 255, 255, 0.3);
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.08);
+  color: #ffffff;
+}
+
+/* Continuous background dot matrix effect */
+.grid-overlay {
+  background-image: radial-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+  background-size: 32px 32px;
+}
+
+/* Custom background ambient spotlight glows (from reference image) */
+.ambient-spotlight {
+  position: absolute;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.01) 40%, rgba(0, 0, 0, 0) 70%);
+  filter: blur(60px);
+  pointer-events: none;
+  z-index: 0;
+}
